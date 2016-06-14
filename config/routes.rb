@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :static_pages
   resources :line_items
   resources :carts
   get 'store/index'
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   root to: 'store#index', as: 'store'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get '/:id' => 'static_pages#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

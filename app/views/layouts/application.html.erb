@@ -14,15 +14,18 @@
   <div id="columns">
     <div id="side">
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><%= link_to 'Home', store_path %></li>
+        <li><%= link_to 'News', static_page_path(4) %></li>
+        <li><%= link_to 'Contact Us', static_page_path(3) %></li>
       </ul>
     </div>
     <div id="main">
       <%= yield %>
+      
     </div>
+  </div>
+  <div id="footer">
+    <%= render "layouts/footer" %>
   </div>
 </body>
 </html>

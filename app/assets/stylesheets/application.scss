@@ -15,7 +15,7 @@
  */
  
 #banner {
-  background: #9c9;
+  background: #111;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
@@ -27,8 +27,12 @@
   }
 }
 
+#footer {
+  text-align: center
+}
+
 #notice {
-  color: #000 !important;
+  color: #111 !important;
   border: 2px solid red;
   padding: 1em;
   margin-bottom: 2em;
@@ -37,7 +41,7 @@
 }
 
 #columns {
-  background: #141;
+  background: #111;
 
   #main {
     margin-left: 17em;
