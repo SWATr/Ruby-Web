@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
+
+  controller :sessions do
+    get  'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  get 'admin/index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  resources :users
+  resources :orders
   resources :static_pages
   resources :line_items
   resources :carts
@@ -30,6 +48,10 @@ Rails.application.routes.draw do
   #     collection do
   #       get 'sold'
   #     end
+  resources :products do
+    get :who_bought, on: :member
+  end
+  
   #   end
 
   # Example resource route with sub-resources:
